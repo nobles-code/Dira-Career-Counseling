@@ -15,7 +15,8 @@ backend/data/
 node_modules/
 frontend/dist/
 *.log
-
+cloc.txt
+tree.txt
 # Python / backend
 __pycache__/
 *.pyc
