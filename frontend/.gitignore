@@ -1,0 +1,32 @@
+# chl-project/.gitignore
+
+# Secrets: never commit; commit .env.example instead
+.env
+.env.*
+!.env.example
+
+# Customer data: orders, voice notes and photos are personal data
+backend/uploads/
+backend/data/
+*.db
+*.sqlite3
+
+# Node / frontend
+node_modules/
+frontend/dist/
+*.log
+
+# Python / backend
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

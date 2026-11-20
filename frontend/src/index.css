@@ -1,0 +1,83 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* Tailwind CSS v4 uses @theme to register design tokens. */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme {
+  --color-navy: #0b3b5b;
+  --color-navy-dark: #072a42;
+  --color-teal: #0f8a83;
+  --color-teal-dark: #0b6b66;
+  --color-gold: #e0a416;
+  --color-gold-dark: #c78f0d;
+  --color-mist: #f3f7f8;
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora Variable", ui-serif, Georgia, serif;
+
+  --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-hero-zoom: hero-zoom 9s ease-out both;
+  --animate-menu-in: menu-in 0.25s ease-out both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+  }
+
+  body {
+    @apply overflow-x-clip bg-white font-sans text-navy antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif text-balance;
+  }
+
+  p {
+    @apply text-pretty;
+ }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-gold) 35%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}

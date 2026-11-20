@@ -1,0 +1,63 @@
+frontend
+├── public
+│   └── favicon-96x96.png.png
+├── src
+│   ├── assets
+│   │   ├── dira-mark.webp
+│   │   ├── hero-1600.jpg
+│   │   ├── hero-1600.png
+│   │   ├── hero-16000.png
+│   │   └── hero-800.png
+│   ├── components
+│   │   ├── layout
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Header.tsx
+│   │   │   ├── Layout.tsx
+│   │   │   ├── ScrollManager.tsx
+│   │   │   └── Wordmark.tsx
+│   │   ├── sections
+│   │   │   ├── ApproachTeaser.tsx
+│   │   │   ├── AudienceGrid.tsx
+│   │   │   ├── CtaBand.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   └── InclusionBand.tsx
+│   │   └── ui
+│   │       ├── ButtonLink.tsx
+│   │       ├── CompassMark.tsx
+│   │       ├── Container.tsx
+│   │       └── SectionHeading.tsx
+│   ├── content
+│   │   ├── about.ts
+│   │   ├── approach.ts
+│   │   ├── contact.ts
+│   │   ├── home.ts
+│   │   ├── partner.ts
+│   │   ├── services.ts
+│   │   └── site.ts
+│   ├── hooks
+│   ├── lib
+│   │   ├── contact.ts
+│   │   └── usePageMeta.ts
+│   ├── pages
+│   │   ├── About.tsx
+│   │   ├── Approach.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Home.tsx
+│   │   ├── NotFound.tsx
+│   │   ├── Partner.tsx
+│   │   └── Services.tsx
+│   ├── types
+│   │   └── content.ts
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── tree.txt
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
