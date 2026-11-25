@@ -1,6 +1,7 @@
 // src/types/content.ts
 export type ServiceId =
   | 'career-guidance'
+  | 'counselling'
   | 'parent-education'
   | 'school-programmes'
   | 'personal-development'
@@ -64,7 +65,24 @@ export interface SocialLink {
   url: string;
 }
 
+export interface Value {
+  title: string;
+  description: string;
+}
 
+export interface AudienceSegment {
+  label: string;
+  summary: string;
+}
+
+export interface FrameworkStage {
+  step: number;
+  title: string;
+  tagline: string;
+  body: string[];
+  listHeading: string;
+  points: string[];
+}
 export interface ImageFeatureContent {
   image: string;
   alt: string;

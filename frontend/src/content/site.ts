@@ -8,7 +8,7 @@ export const site = {
   shortName: 'Dira',
   tagline: 'Clarity. Confidence. Purpose.',
   description:
-    'Career guidance, parent education, school career programmes and mentorship that help learners and families make informed decisions about education, careers and life.',
+    'Career guidance, counselling, parent education, school career programmes and mentorship that help individuals and families make informed decisions about education, careers and life.',
   url: 'https://diracareersandcounselling.co.ke',
 };
 
