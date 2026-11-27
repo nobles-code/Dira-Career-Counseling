@@ -29,8 +29,7 @@ export default function ButtonLink({
   className = '',
   onClick,
 }: ButtonLinkProps) {
-  const classes = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal ${variants[variant]} ${className}`;
-
+  const classes = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-200 ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-lg motion-safe:hover:shadow-navy/20 motion-safe:active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal ${variants[variant]} ${className}`;
   if (isExternal(to)) {
     return (
       <a href={to} target="_blank" rel="noopener noreferrer" onClick={onClick} className={classes}>

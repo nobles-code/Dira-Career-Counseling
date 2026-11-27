@@ -18,6 +18,13 @@
   --animate-fade-up: fade-up 0.8s ease-out both;
   --animate-hero-zoom: hero-zoom 9s ease-out both;
   --animate-menu-in: menu-in 0.25s ease-out both;
+  --animate-word-up: word-up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-line-grow: line-grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-float: float 14s ease-in-out infinite alternate;
+  --animate-scroll-dot: scroll-dot 1.8s ease-in-out infinite;
+  --animate-kenburns: kenburns 16s ease-in-out infinite alternate;
+  --animate-sheet-up: sheet-up 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-fade-in: fade-in 0.25s ease-out both;
 }
 
 @keyframes fade-up {
@@ -48,6 +55,108 @@
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+
+@keyframes word-up {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes line-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(4rem, -2.5rem, 0) scale(1.15);
+  }
+}
+
+@keyframes scroll-dot {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(300%);
+  }
+}
+
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scroll-driven hero effects. Progressive enhancement: browsers without
+   animation-timeline simply show the hero static. */
+@keyframes hero-parallax {
+  to {
+    transform: translateY(8%);
+  }
+}
+
+@keyframes hero-content-out {
+  to {
+    opacity: 0.25;
+    transform: translateY(-2rem);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .hero-fade {
+      animation-name: hero-content-out;
+      animation-timeline: scroll(root block);
+      animation-range: 0 85svh;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+    }
+
+    @media (min-width: 48rem) {
+      .hero-parallax {
+        animation-name: hero-parallax;
+        animation-timeline: scroll(root block);
+        animation-range: 0 85svh;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+      }
+    }
   }
 }
 

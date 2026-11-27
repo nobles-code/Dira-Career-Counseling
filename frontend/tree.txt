@@ -1,13 +1,19 @@
 frontend
 ├── public
-│   └── favicon-96x96.png.png
+│   ├── favicon-96.jpg
+│   ├── favicon-96x96.png
+│   └── og-image.jpg
 ├── src
 │   ├── assets
 │   │   ├── dira-mark.webp
 │   │   ├── hero-1600.jpg
 │   │   ├── hero-1600.png
 │   │   ├── hero-16000.png
-│   │   └── hero-800.png
+│   │   ├── hero-800.png
+│   │   ├── njeri_gathimba.jpg
+│   │   ├── workshop-growth.png
+│   │   ├── workshop-guidance.png
+│   │   └── workshop-partners.png
 │   ├── components
 │   │   ├── layout
 │   │   │   ├── Footer.tsx
@@ -19,22 +25,31 @@ frontend
 │   │   │   ├── ApproachTeaser.tsx
 │   │   │   ├── AudienceGrid.tsx
 │   │   │   ├── CtaBand.tsx
+│   │   │   ├── Faq.tsx
 │   │   │   ├── Hero.tsx
+│   │   │   ├── HowItWorks.tsx
+│   │   │   ├── ImageFeature.tsx
 │   │   │   └── InclusionBand.tsx
 │   │   └── ui
 │   │       ├── ButtonLink.tsx
 │   │       ├── CompassMark.tsx
 │   │       ├── Container.tsx
+│   │       ├── FloatingChat.tsx
+│   │       ├── Reveal.tsx
+│   │       ├── ScrollProgress.tsx
 │   │       └── SectionHeading.tsx
 │   ├── content
 │   │   ├── about.ts
 │   │   ├── approach.ts
 │   │   ├── contact.ts
+│   │   ├── extras.ts
 │   │   ├── home.ts
+│   │   ├── imagery.ts
 │   │   ├── partner.ts
 │   │   ├── services.ts
 │   │   └── site.ts
 │   ├── hooks
+│   │   └── useReveal.ts
 │   ├── lib
 │   │   ├── contact.ts
 │   │   └── usePageMeta.ts
@@ -52,6 +67,7 @@ frontend
 │   ├── index.css
 │   └── main.tsx
 ├── README.md
+├── cloc.txt
 ├── eslint.config.js
 ├── index.html
 ├── package-lock.json
@@ -60,4 +76,5 @@ frontend
 ├── tsconfig.app.json
 ├── tsconfig.json
 ├── tsconfig.node.json
-└── vite.config.ts
+├── vite.config.ts
+└── wrangler.jsonc
